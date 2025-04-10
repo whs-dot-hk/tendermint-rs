@@ -749,14 +749,17 @@ dependencies = [
 ]
 
 [[package]]
-name = "ed25519-consensus"
-version = "2.1.0"
-source = "git+https://github.com/whs-dot-hk/ed25519-consensus?branch=test#34e7df76ab6498c2c63d7b4dffb975632d88337b"
+name = "ed25519-consensus-whs"
+version = "2.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "07cd3c5725aee284bea9c7317743ee8c620a0ec136b075e69e479774ee2f492e"
 dependencies = [
  "curve25519-dalek",
  "hex",
  "rand_core 0.9.3",
+ "serde",
  "sha2",
+ "thiserror 2.0.12",
  "zeroize",
 ]
 
@@ -2893,7 +2896,7 @@ dependencies = [
  "bytes",
  "digest 0.10.7",
  "ed25519",
- "ed25519-consensus",
+ "ed25519-consensus-whs",
  "flex-error",
  "futures",
  "k256",
@@ -3048,7 +3051,7 @@ dependencies = [
  "aead",
  "chacha20poly1305",
  "curve25519-dalek-ng",
- "ed25519-consensus",
+ "ed25519-consensus-whs",
  "eyre",
  "flex-error",
  "flume",
@@ -3119,7 +3122,7 @@ dependencies = [
  "tendermint",
  "tendermint-config",
  "tendermint-proto",
- "thiserror",
+ "thiserror 1.0.69",
  "time",
  "tokio",
  "tokio-test",
@@ -3139,7 +3142,7 @@ name = "tendermint-test"
 version = "0.40.3"
 dependencies = [
  "curve25519-dalek-ng",
- "ed25519-consensus",
+ "ed25519-consensus-whs",
  "flex-error",
  "flume",
  "rand_core 0.6.4",
@@ -3154,7 +3157,7 @@ dependencies = [
 name = "tendermint-testgen"
 version = "0.40.3"
 dependencies = [
- "ed25519-consensus",
+ "ed25519-consensus-whs",
  "gumdrop",
  "serde",
  "serde_json",
@@ -3179,7 +3182,16 @@ version = "1.0.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b6aaf5339b578ea85b50e080feb250a3e8ae8cfcdff9a461c9ec2904bc923f52"
 dependencies = [
- "thiserror-impl",
+ "thiserror-impl 1.0.69",
+]
+
+[[package]]
+name = "thiserror"
+version = "2.0.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "567b8a2dae586314f7be2a752ec7474332959c6460e02bde30d702a66d488708"
+dependencies = [
+ "thiserror-impl 2.0.12",
 ]
 
 [[package]]
@@ -3187,6 +3199,17 @@ name = "thiserror-impl"
 version = "1.0.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4fee6c4efc90059e10f81e6d42c60a18f76588c3d74cb83a0b242a2b6c7504c1"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.100",
+]
+
+[[package]]
+name = "thiserror-impl"
+version = "2.0.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7f7cf42b4507d8ea322120659672cf1b9dbb93f8f2d4ecfd6e51350ff5b17a1d"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3533,7 +3556,7 @@ dependencies = [
  "rustls 0.22.4",
  "rustls-pki-types",
  "sha1",
- "thiserror",
+ "thiserror 1.0.69",
  "url",
  "utf-8",
 ]

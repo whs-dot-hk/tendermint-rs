@@ -19,7 +19,7 @@ description = """
 tendermint = { version = "0.40.3", path = "../tendermint", features = ["clock"] }
 serde = { version = "1", default-features = false, features = ["derive"] }
 serde_json = { version = "1", default-features = false, features = ["std"] }
-ed25519-consensus = { default-features = false, git = "https://github.com/whs-dot-hk/ed25519-consensus", branch = "test" }
+ed25519-consensus = { version = "2.2.0", package = "ed25519-consensus-whs" }
 gumdrop = { version = "0.8.0", default-features = false }
 simple-error = { version = "0.3.0", default-features = false }
 tempfile = { version = "3.1.0", default-features = false }
