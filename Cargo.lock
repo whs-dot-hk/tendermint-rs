@@ -260,15 +260,6 @@ checksum = "5c8214115b7bf84099f1309324e63141d4c5d7cc26862f97a0a857dbefe165bd"
 
 [[package]]
 name = "block-buffer"
-version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4152116fd6e9dadb291ae18fc1ec3575ed6d84c29642d97890f4b4a3417297e4"
-dependencies = [
- "generic-array",
-]
-
-[[package]]
-name = "block-buffer"
 version = "0.10.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3078c7629b62d3f0439517fa394996acacc5cbc91c5a20d8c658e77abd503a71"
@@ -710,7 +701,7 @@ version = "0.10.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9ed9a281f7bc9b7576e61468ba615a66a5c8cfdff42420a70aa82701a3b1e292"
 dependencies = [
- "block-buffer 0.10.4",
+ "block-buffer",
  "const-oid",
  "crypto-common",
  "subtle",
@@ -760,25 +751,12 @@ dependencies = [
 [[package]]
 name = "ed25519-consensus"
 version = "2.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3c8465edc8ee7436ffea81d21a019b16676ee3db267aa8d5a8d729581ecf998b"
-dependencies = [
- "curve25519-dalek-ng",
- "hex",
- "rand_core 0.6.4",
- "sha2 0.9.9",
- "zeroize",
-]
-
-[[package]]
-name = "ed25519-consensus"
-version = "2.1.0"
 source = "git+https://github.com/whs-dot-hk/ed25519-consensus?branch=test#34e7df76ab6498c2c63d7b4dffb975632d88337b"
 dependencies = [
  "curve25519-dalek",
  "hex",
  "rand_core 0.9.3",
- "sha2 0.10.8",
+ "sha2",
  "zeroize",
 ]
 
@@ -1572,7 +1550,7 @@ dependencies = [
  "cfg-if",
  "ecdsa",
  "elliptic-curve",
- "sha2 0.10.8",
+ "sha2",
 ]
 
 [[package]]
@@ -2658,19 +2636,6 @@ dependencies = [
 
 [[package]]
 name = "sha2"
-version = "0.9.9"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4d58a1e1bf39749807d89cf2d98ac2dfa0ff1cb3faa38fbb64dd88ac8013d800"
-dependencies = [
- "block-buffer 0.9.0",
- "cfg-if",
- "cpufeatures",
- "digest 0.9.0",
- "opaque-debug",
-]
-
-[[package]]
-name = "sha2"
 version = "0.10.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "793db75ad2bcafc3ffa7c68b215fee268f537982cd901d132f89c6343f3a3dc8"
@@ -2928,7 +2893,7 @@ dependencies = [
  "bytes",
  "digest 0.10.7",
  "ed25519",
- "ed25519-consensus 2.1.0 (git+https://github.com/whs-dot-hk/ed25519-consensus?branch=test)",
+ "ed25519-consensus",
  "flex-error",
  "futures",
  "k256",
@@ -2942,7 +2907,7 @@ dependencies = [
  "serde_bytes",
  "serde_json",
  "serde_repr",
- "sha2 0.10.8",
+ "sha2",
  "signature",
  "subtle",
  "subtle-encoding",
@@ -3070,7 +3035,7 @@ dependencies = [
  "flex-error",
  "serde",
  "serde_json",
- "sha2 0.10.8",
+ "sha2",
  "tendermint",
  "tendermint-testgen",
  "time",
@@ -3083,7 +3048,7 @@ dependencies = [
  "aead",
  "chacha20poly1305",
  "curve25519-dalek-ng",
- "ed25519-consensus 2.1.0 (git+https://github.com/whs-dot-hk/ed25519-consensus?branch=test)",
+ "ed25519-consensus",
  "eyre",
  "flex-error",
  "flume",
@@ -3092,7 +3057,7 @@ dependencies = [
  "prost",
  "prost-derive",
  "rand_core 0.6.4",
- "sha2 0.10.8",
+ "sha2",
  "signature",
  "subtle",
  "tendermint",
@@ -3174,7 +3139,7 @@ name = "tendermint-test"
 version = "0.40.3"
 dependencies = [
  "curve25519-dalek-ng",
- "ed25519-consensus 2.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ed25519-consensus",
  "flex-error",
  "flume",
  "rand_core 0.6.4",
@@ -3189,7 +3154,7 @@ dependencies = [
 name = "tendermint-testgen"
 version = "0.40.3"
 dependencies = [
- "ed25519-consensus 2.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ed25519-consensus",
  "gumdrop",
  "serde",
  "serde_json",
