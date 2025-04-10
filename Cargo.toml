@@ -2,21 +2,21 @@
 resolver = "2"
 
 members = [
-    "abci",
+    #"abci",
     "config",
-    "light-client",
-    "light-client-verifier",
-    "light-client-detector",
-    "light-client-cli",
-    "light-client-js",
-    "p2p",
-    "pbt-gen",
-    "proto",
-    "rpc",
-    "std-ext",
+    #"light-client",
+    #"light-client-verifier",
+    #"light-client-detector",
+    #"light-client-cli",
+    #"light-client-js",
+    #"p2p",
+    #"pbt-gen",
+    #"proto",
+    #"rpc",
+    #"std-ext",
     "tendermint",
-    "test",
-    "testgen"
+    #"test",
+    #"testgen"
 ]
 
 exclude = [
