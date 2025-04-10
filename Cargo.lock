@@ -773,7 +773,7 @@ dependencies = [
 [[package]]
 name = "ed25519-consensus"
 version = "2.1.0"
-source = "git+https://github.com/whs-dot-hk/ed25519-consensus?branch=test#e248ad296d90aa59a4c5a8f2b4e7e3145cf669e7"
+source = "git+https://github.com/whs-dot-hk/ed25519-consensus?branch=test#34e7df76ab6498c2c63d7b4dffb975632d88337b"
 dependencies = [
  "curve25519-dalek",
  "hex",
@@ -3083,7 +3083,7 @@ dependencies = [
  "aead",
  "chacha20poly1305",
  "curve25519-dalek-ng",
- "ed25519-consensus 2.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ed25519-consensus 2.1.0 (git+https://github.com/whs-dot-hk/ed25519-consensus?branch=test)",
  "eyre",
  "flex-error",
  "flume",
