@@ -1595,7 +1595,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "tendermint-config"
+name = "tendermint-config-whs"
 version = "0.40.3"
 dependencies = [
  "flex-error",
